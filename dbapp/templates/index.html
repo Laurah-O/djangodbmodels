@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Items List</h1>
+    <ul>
+        {% for item in items %}
+            <li><a href="{% url 'detail' item.id %}">{{ item.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

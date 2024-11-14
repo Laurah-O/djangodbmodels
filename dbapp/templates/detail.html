@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Detail Page</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>{{ item.title }}</h1>
+    <p>{{ item.description }}</p>
+    <p>Last Modified: {{ item.last_modified }}</p>
+    <img src="{{ item.img.url }}" alt="{{ item.title }}">
+</body>
+</html>
